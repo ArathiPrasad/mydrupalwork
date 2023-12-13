@@ -1,0 +1,30 @@
+uuid: 8a9dc722-17ac-47bd-8e26-373b6da0e025
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+  theme:
+    - bootstrap_sass
+id: bootstrap_sass_quicktabsconferencetabs
+theme: bootstrap_sass
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:conference_tabs'
+settings:
+  id: 'quicktabs_block:conference_tabs'
+  label: 'QuickTabs - Conference Tabs'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      landing_page: landing_page
+      page: page

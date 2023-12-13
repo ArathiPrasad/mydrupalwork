@@ -1,0 +1,19 @@
+uuid: 585e5836-f101-4e74-b7c9-501bdab6b73c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.conference
+id: node.conference.field_location
+field_name: field_location
+entity_type: node
+bundle: conference
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,32 @@
+uuid: 74465a4e-979f-49ea-8940-ce0cfaed33da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - search
+  theme:
+    - bootstrap_sass
+_core:
+  default_config_hash: 2iCQwV1sUXShyd5mbLu0pexRpjTu8zz0_gdfaVpeudA
+id: bootstrap_sass_search_form_narrow
+theme: bootstrap_sass
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page

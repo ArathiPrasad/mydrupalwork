@@ -1,0 +1,10 @@
+uuid: 1968d668-1857-4f7a-bf0a-2fa63d1422e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.conference_card
+label: 'Conference Card'
+targetEntityType: node
+cache: true

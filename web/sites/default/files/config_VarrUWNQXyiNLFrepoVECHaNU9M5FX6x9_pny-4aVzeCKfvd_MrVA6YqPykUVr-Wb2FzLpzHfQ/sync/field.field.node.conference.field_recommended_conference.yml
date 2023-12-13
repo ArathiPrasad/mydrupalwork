@@ -1,0 +1,21 @@
+uuid: 522bcf25-de62-41d0-9c19-8b5e6f242f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recommended_conference
+    - node.type.conference
+id: node.conference.field_recommended_conference
+field_name: field_recommended_conference
+entity_type: node
+bundle: conference
+label: 'Recommended Conference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
