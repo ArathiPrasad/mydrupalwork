@@ -2,7 +2,7 @@ $breakpoint-max-tablet: 767px;
 $breakpoint-max-tablet-large: 1023px;
 $breakpoint-max-fablet: 991px;
 $breakpoint-min-tablet: 768px;
-$breakpoint-min-tablet-large: 1024px;
+$breakpoint-min-large: 1200px;
 $breakpoint-min-fablet: 992px;
 
 .conference-slider {
@@ -11,11 +11,17 @@ $breakpoint-min-fablet: 992px;
         display: none;
       }
     }
+
+    .slick-list {
+      @media (min-width: $breakpoint-min-large) {
+        height: 550px;
+      }
+    }
     .node--view-mode-conference-card {
       margin: 15px;
       border: 2px solid #e8e8e3;
       border-radius: 5px;
-      // height: 395px;
+      cursor: pointer;
 
       .conference-card {
         margin-top: 0;
@@ -156,19 +162,22 @@ $breakpoint-min-fablet: 992px;
     .slick-slider {
       .slick-arrow {
         position: absolute;
-        top: 45%;
+        top: 40%;
         cursor: pointer;
         display: flex;
-        font-size: 36px;
+        font-size: 40px;
+        transform: translate(0,-50%);
+        width: 20px;
+        height: 20px;
   
         &.left {
-          margin-left: -4rem;
+          left: -60px;
         }
   
         &.right {
-          justify-content: end;
-          margin-left: 4rem;
+          right: -50px;
         }
+
       }
 
       .slick-dots {

@@ -18,7 +18,7 @@
         slidesToScroll: 1,
         arrows: true,
         dots: false,
-        nextArrow: '<div class="right"><i class="fa fa-angle-right"></i></div>',
+        nextArrow: '<div class="right "><i class="fa fa-angle-right"></i></div>',
         prevArrow: '<div class="left"><i class="fa fa-angle-left"></i></div>',
         responsive: [
         {
@@ -61,10 +61,12 @@
       $('.conference-quicktab', context).prepend(header);
       $('.conference-slider .view-header').remove();
 
-      var src = $('.conference-image img', context).attr('src');
-      $('.conference-image img').attr('src', src).on("error", function(e) {
-        var title = $('.conference-image img').attr("title");
-        $(this).replaceWith("<span>" + title + "</span>");
+      $('.conference-image img', context).each(function( index ) {
+        var src = $(this).attr('src');
+        $(this).attr('src', src).on("error", function(e) {
+          var title = $(this).attr("title");
+          $(this).replaceWith("<span>" + title + "</span>");
+        });
       });
     }
   };
